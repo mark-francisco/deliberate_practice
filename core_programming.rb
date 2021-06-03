@@ -145,12 +145,12 @@
 # puts "enter a color"
 # color3 = gets.chomp
 
-# puts "#{color1} #{color2} #{color3}" 
+# puts "#{color1} #{color2} #{color3}"
 
 # # 6. Write a program that asks the user to enter a name. If the name is not "Santa", print "You're not Santa."
 # puts "enter a name"
 # name = gets.chomp
-# if name != "Santa" 
+# if name != "Santa"
 #   puts "you're not santa"
 # end
 
@@ -278,13 +278,55 @@
 # states["alaska"] = "salmon creek"
 # puts states
 
-# 7. Make a hash to store a laptop's brand, model, and year. Then print each attribute on separate lines.
+# # 7. Make a hash to store a laptop's brand, model, and year. Then print each attribute on separate lines.
+# laptop = {
+#   :brand => "dell",
+#   :model => "inspiron",
+#   :year => 2008,
+# }
 
-# 8. Make an array of hashes to store the brand and model for 3 different laptops. Then print out the second laptop's model.
+# p laptop[:brand]
+# p laptop[:model]
+# p laptop[:year]
 
-# 9. Make a hash to store definitions for 2 different words. Then add a new word and definition and print the hash to see the result.
+# # 8. Make an array of hashes to store the brand and model for 3 different laptops. Then print out the second laptop's model.
+# laptops = [
+#   {
+#     :brand => "dell",
+#     :model => "inspiron",
+#     :year => 2008,
+#   },
+#   {
+#     :brand => "gateway",
+#     :model => "gatekeeper",
+#     :year => 2009,
+#   },
+#   {
+#     :brand => "hp",
+#     :model => "hipper",
+#     :year => 2012,
+#   },
+# ]
+# pp laptops[1][:model]
 
-# 10. Make a hash to store a shirt's brand, color, and size. Then print each attribute on separate lines.
+# # 9. Make a hash to store definitions for 2 different words. Then add a new word and definition and print the hash to see the result.
+# words = {
+#   :book => "paper with bindings and covers",
+#   :letter => "part of the alphabet, or type of correspondence",
+# }
 
+# words[:bird] = "fictional animal"
 
+# pp words
+
+# # 10. Make a hash to store a shirt's brand, color, and size. Then print each attribute on separate lines.
+# shirt = {
+#   :brand => "burton",
+#   :color => "oatmeal",
+#   :size => "small",
+# }
+
+# p shirt[:brand]
+# p shirt[:color]
+# p shirt[:size]
 # SOLUTIONS: https://gist.github.com/peterxjang/d257aec07882d78009bd796ed53f81bb
