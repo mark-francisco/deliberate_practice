@@ -373,15 +373,44 @@
 
 # pp arrayify(example_arr)
 
-puts "you left off here"
-#  4. Start with an array of numbers and create a new array with each number plus 7.
-#     For example, [1, 2, 3] becomes [8, 9, 10].
+# #  4. Start with an array of numbers and create a new array with each number plus 7.
+# #     For example, [1, 2, 3] becomes [8, 9, 10].
+# arr = [1,2,3]
+# def plus_7(arr)
+#   arr.map! { |arr_item|
+#     arr_item + 7
+#   }
+#   return arr
+# end
 
-#  5. Start with an array of strings and create a new array with each string's length.
-#     For example, ["hello", "goodbye"] becomes [5, 7].
+# pp plus_7(arr)
 
-#  6. Start with an array of hashes and create a new array of number values from each hash's :age key.
-#     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes [27, 16].
+# #  5. Start with an array of strings and create a new array with each string's length.
+# #     For example, ["hello", "goodbye"] becomes [5, 7].
+# arr = ["hello", "goodbye", "adios amigo"]
+# def string_lengths(arr)
+#   lengths = []
+#   arr.map { |arr_item|
+#     lengths << arr_item.length
+#   }
+#   return lengths
+# end
+
+# pp string_lengths(arr)
+
+
+# #  6. Start with an array of hashes and create a new array of number values from each hash's :age key.
+# #     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes [27, 16].
+# arr = [{name: "Alice", age: 27}, {name: "Blane", age: 16}, {:name => "David", :age => 31}] 
+# def make_array_of_ages(arr)
+#   ages = []
+#   arr.each{ |arr_item|
+#     ages << arr_item[:age]
+#   }
+#   return ages
+# end
+
+# pp make_array_of_ages(arr)
 
 #  7. Start with an array of numbers and create a new array with each number divided by 2.
 #     For example, [1, 2, 3] becomes [0.5, 1.0, 1.5].
