@@ -398,10 +398,9 @@
 
 # pp string_lengths(arr)
 
-
 # #  6. Start with an array of hashes and create a new array of number values from each hash's :age key.
 # #     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes [27, 16].
-# arr = [{name: "Alice", age: 27}, {name: "Blane", age: 16}, {:name => "David", :age => 31}] 
+# arr = [{name: "Alice", age: 27}, {name: "Blane", age: 16}, {:name => "David", :age => 31}]
 # def make_array_of_ages(arr)
 #   ages = []
 #   arr.each{ |arr_item|
@@ -412,27 +411,50 @@
 
 # pp make_array_of_ages(arr)
 
-#  7. Start with an array of numbers and create a new array with each number divided by 2.
-#     For example, [1, 2, 3] becomes [0.5, 1.0, 1.5].
-def div_by_2(arr)
-  arr.map! { |arr_item|
-    arr_item.to_f / 2
-  }
-  return arr
-end
+# #  7. Start with an array of numbers and create a new array with each number divided by 2.
+# #     For example, [1, 2, 3] becomes [0.5, 1.0, 1.5].
+# def div_by2(arr)
+#   arr.map! { |arr_item|
+#     arr_item.to_f / 2
+#   }
+#   return arr
+# end
 
-pp div_by_2([1,2,3,4.5])
+# pp div_by2([1, 2, 3, 4.5])
 
-puts "you left off here"
+# #  8. Start with an array of strings and create a new array with each string's first letter only.
+# #     For example, ["hello", "goodbye"] becomes ["h", "g"].
+# def first_letters_only(arr)
+#   new_arr = []
+#   arr.each { |arr_item|
+#     new_arr << arr_item[0]
+#   }
+#   return new_arr
+# end
 
-#  8. Start with an array of strings and create a new array with each string's first letter only.
-#     For example, ["hello", "goodbye"] becomes ["h", "g"].
+# pp first_letters_only(["hello", "goodbye", "again hello"])
 
-# 9.  Start with an array of hashes and create a new array of number values from each hash's :age key times 2.
-#     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes [54, 32].
+# # 9.  Start with an array of hashes and create a new array of number values from each hash's :age key times 2.
+# #     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes [54, 32].
+# def double_age(arr)
+#   new_arr = []
+#   arr.each { |arr_item|
+#     new_arr << arr_item[:age] * 2
+#   }
+#   return new_arr
+# end
 
-# 10. Start with an array of numbers and create a new array with each number converted into a string.
-#     For example, [1, 2, 3] becomes ["1", "2", "3"].
+# pp double_age([{ name: "Alice", age: 27 }, { name: "Blane", age: 16 }, { name: "Blane", age: 124 }])
+
+# # 10. Start with an array of numbers and create a new array with each number converted into a string.
+# #     For example, [1, 2, 3] becomes ["1", "2", "3"].
+# def stringify(arr)
+#   arr.map! { |arr_item|
+#     arr_item = "#{arr_item}"
+#   }
+# end
+
+# pp stringify([1, 2, 3])
 
 # SOLUTIONS (using while loop): https://gist.github.com/peterxjang/b9ac4390aad2301a2238efc95c904f3d
 # SOLUTIONS (using .each shortcut): https://gist.github.com/peterxjang/66598fd7cdbc67fe663624e217cebbaf
