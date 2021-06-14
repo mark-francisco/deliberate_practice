@@ -498,20 +498,31 @@
 # end
 # pp sum_of_price_key([{ name: "chair", price: 100 }, { name: "pencil", price: 1 }, { name: "book", price: 4 }])
 
-#  4. Start with an array of numbers and compute the the minumum number.
-#     For example, [5, 10, 8, 3, 9] becomes 3.
-# def arr.reduce(arr[0]) { |min, arr_item|
-#   if arr_item <= min
-#     min = arr_item
-#   end
-#   return min
-# } 
+# #  4. Start with an array of numbers and compute the the minumum number.
+# # For example, [5, 10, 8, 3, 9] becomes 3.
+# def minimum_num(arr)
+#   arr.reduce(arr[0]) { |min, arr_item|
+#     if arr_item <= min
+#       min = arr_item
+#     end
+#     min
+#   }
+# end
 
-puts "you left off here"
+# pp minimum_num([5, 10, 8, 3, 9])
+# pp minimum_num([5, 2, 8, -1, 11])
 
-end
 #  5. Start with an array of strings and compute the total length of all the strings.
 #     For example, ["volleyball", "basketball", "badminton"] becomes 29.
+def total_length(arr)
+  arr.reduce { |concat_string, arr_item|
+    concat_string + arr_item
+  }
+end
+
+pp total_length(["volleyball", "basketball", "badminton"])
+
+puts "you left off here"
 
 #  6. Start with an array of hashes and find the hash with the lowest price (from the :price key).
 #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes {name: "pencil", price: 1}.
