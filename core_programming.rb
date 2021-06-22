@@ -535,18 +535,48 @@
 
 # pp lowest_price([{ name: "chair", price: 100 }, { name: "pencil", price: 1 }, { name: "book", price: 4 }])
 
-#  7. Start with an array of numbers and compute product of all the numbers.
-#     For example, [5, 10, 8, 3] becomes 1200.
-puts "you left off here"
+# #  7. Start with an array of numbers and compute product of all the numbers.
+# #     For example, [5, 10, 8, 3] becomes 1200.
+# def product(arr)
+#   return arr.reduce() { |product, arr_item|
+#            product * arr_item
+#          }
+# end
 
-#  8. Start with an array of strings and combine them all into a single string, separated by dashes.
-#     For example, ["volleyball", "basketball", "badminton"] becomes "-volleyball-basketball-badminton-".
+# pp product([5, 10, 8, 3])
 
-#  9. Start with an array of hashes and find the hash with the shortest name (from the :name key).
-#     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes {name: "book", price: 4}.
+# #  8. Start with an array of strings and combine them all into a single string, separated by dashes.
+# #     For example, ["volleyball", "basketball", "badminton"] becomes "-volleyball-basketball-badminton-".
 
-# 10. Start with an array of numbers and compute the maximum number.
-#     For example, [5, 10, 8, 3] becomes 10.
+# def stringify(arr)
+#   arr.reduce("-") { |combined_str, arr_item|
+#     combined_str += "#{arr_item}-"
+#   }
+# end
+# pp stringify(["volleyball", "basketball", "badminton"])
+
+# #  9. Start with an array of hashes and find the hash with the shortest name (from the :name key).
+# #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes {name: "book", price: 4}.
+# def shortest_name(arr)
+#   shortest = arr[0]
+#   arr.each { |arr_item|
+#     if arr_item[:name].length <= shortest[:name].length
+#       shortest = arr_item
+#     end
+#   }
+#   return shortest
+# end
+# pp shortest_name([{ name: "chair", price: 100 }, { name: "pencil", price: 1 }, { name: "book", price: 4 }])
+
+# # 10. Start with an array of numbers and compute the maximum number.
+# #     For example, [5, 10, 8, 3] becomes 10.
+# def max_number(arr)
+#   arr.reduce { |max, arr_item|
+#     arr_item >= max ? arr_item : max
+#   }
+# end
+
+# pp max_number([5, 10, 8, 3])
 
 # SOLUTIONS (using while loop): https://gist.github.com/peterxjang/376c8931a48549889eb3c9bc091e9f43
 # SOLUTIONS (using .each shortcut): https://gist.github.com/peterxjang/379c9945774f51027750c59d6e4395df
